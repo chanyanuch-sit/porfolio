@@ -1,0 +1,237 @@
+extends layout
+
+block content
+	include navbar
+
+	main
+
+		section#about.section--about
+			.container
+				.row.mb-5
+					.col-lg-8
+						img.rounded-circle(src="../assets/images/avatar.jpg", alt="avatar" height="128").border.border-4.mb-4
+						h1.display-4.fw-bold.mb-3 Hi, I'm Chanyanuch Sitti [Nan] 👋
+						p.h5.fw-bold.mb-4 UX/UI Designer & Frontend Developer
+						div
+							| UX/UI Designer with 5+ years of experience and a strong frontend foundation, specializing in design systems, component-driven UI, and responsive web and mobile interfaces. Experienced in bridging design and development by converting UX concepts into scalable, production-ready frontend implementations through close collaboration with cross-functional teams.
+					
+					
+		//- Experience
+		section#experience.section--experience.border-bottom
+			.container
+				h2.display-5.fw-bold Experience
+				.border-top
+				.d-flex.flex-column.gap-4.gap-md-5
+					.row.gy-3.g-md-4.g-xl-5.align-items-start.position-relative
+						.col-12.col-md-3
+							h3.fw-bold.mb-2.text-dark UX/UI Developer
+							h4.fs-6.fw-normal 2020 - Present
+						.col-12.col-md-3.position-relative
+							.timeline
+								i.fa-solid.fa-circle-dot
+							.label
+								p.h5.mb-1 Tenfuse
+								.small Fulltime
+						.col-12.col-md-6.ps-4
+							ul.list-unstyled
+								li.mb-2
+									i.fa-solid.fa-square
+									| Designed end-to-end systems from concept to real-world implementation for web and mobile applications
+								li.mb-2
+									i.fa-solid.fa-square
+									| Led UX and UI design processes across multiple platforms to ensure consistent user experience
+								li.mb-2
+									i.fa-solid.fa-square
+									| Built and maintained scalable design systems to ensure visual and functional consistency
+								li.mb-2
+									i.fa-solid.fa-square
+									| Improved product design through user feedback, usability testing, and product analytics
+								li.mb-2
+									i.fa-solid.fa-square
+									| Developed mobile application features using React Native
+								li.mb-2
+									i.fa-solid.fa-square
+									| Translated designs from Figma into web applications and mobile applications for development handoff
+								li.mb-2
+									i.fa-solid.fa-square
+									| Defined design systems and reusable components to enable smooth collaboration with developers
+					.row.gy-3.g-md-4.g-xl-5.align-items-start.position-relative
+						.col-12.col-md-3
+							h3.fw-bold.mb-2.text-dark UI Designer & Frontend
+							h4.fs-6.fw-normal 2019
+						.col-12.col-md-3.position-relative
+							.timeline
+								i.fa-solid.fa-circle-dot
+							.label
+								p.h5.mb-1 Celestica Thailand
+								.small Fulltime
+						.col-12.col-md-6.ps-4
+							ul.list-unstyled
+								li.mb-2
+									i.fa-solid.fa-square
+									| Designed reporting systems and dashboards to support business operations
+								li.mb-2
+									i.fa-solid.fa-square
+									| Created and defined design systems for frontend teams in inventory management systems
+								li.mb-2
+									i.fa-solid.fa-square
+									| Improved usability and consistency across internal systems
+								li.mb-2
+									i.fa-solid.fa-square
+									| Implemented responsive design improvements for company web applications, optimized for iPad usage
+					.row.gy-3.g-md-4.g-xl-5.align-items-start.position-relative
+						.col-12.col-md-3
+							h3.fw-bold.mb-2.text-dark UI Developer
+							h4.fs-6.fw-normal 2016 - 2019
+						.col-12.col-md-3.position-relative
+							.timeline
+								i.fa-solid.fa-circle-dot
+							.label
+								p.h5.mb-1 Computerlogy
+								.small Fulltime
+						.col-12.col-md-6.ps-4
+							ul.list-unstyled
+								li.mb-2
+									i.fa-solid.fa-square
+									| Designed UI layouts and built reusable CSS templates for frontend development handoff (Html & Css)
+								li.mb-2
+									i.fa-solid.fa-square
+									| Created UI designs using Adobe XD based on product requirements
+								li.mb-2
+									i.fa-solid.fa-square
+									| Developed custom WordPress themes for company websites
+								li.mb-2
+									i.fa-solid.fa-square
+									| Implemented on-page SEO techniques in WordPress to improve search engine ranking
+								li.mb-2
+									i.fa-solid.fa-square
+									| Redesigned a Social Listening Tools platform to enhance usability and visual clarity
+
+		//- Skills
+		section#skills.section--skills
+			.container
+				h2.display-5.fw-bold Skills
+				.border-top
+				.row.g-4.mb-5
+					.col-md-6
+						h5.fw-bold.mb-4 UX / UI Design
+						ul.list-unstyled.mb-0
+							li.mb-2
+								i.fa-solid.fa-square
+								| End-to-End Product Design
+							li.mb-2
+								i.fa-solid.fa-square
+								| UX Strategy & User Flow
+							li.mb-2
+								i.fa-solid.fa-square
+								| Wireframing & High-Fidelity UI
+							li.mb-2
+								i.fa-solid.fa-square
+								| Design System & Component Design
+							li.mb-2
+								i.fa-solid.fa-square
+								| Usability Testing & Iteration
+							li
+								i.fa-solid.fa-square
+								| Responsive & Cross-Platform Design
+					.col-md-6
+						h5.fw-bold.mb-4 Frontend & Development
+						ul.list-unstyled.mb-0
+							li.mb-2
+								i.fa-solid.fa-square
+								| HTML, CSS
+							li.mb-2
+								i.fa-solid.fa-square
+								| CSS Template & UI Handoff
+							li.mb-2
+								i.fa-solid.fa-square
+								| React Native
+							li.mb-2
+								i.fa-solid.fa-square
+								| WordPress Theme Development
+							li
+								i.fa-solid.fa-square
+								| Design-to-Code Collaboration
+				.hstack.flex-wrap.gap-2
+					.border-top.mb-0.me-1(style="width: 1rem")
+					span.p-2.border.rounded
+						img(src="../assets/images/html.png", alt="Tools")
+					span.p-2.border.rounded
+						img(src="../assets/images/css.png", alt="Tools")
+					span.p-2.border.rounded
+						img(src="../assets/images/js.png", alt="Tools")
+					span.p-2.border.rounded
+						img(src="../assets/images/react.png", alt="Tools")
+					span.p-2.border.rounded
+						img(src="../assets/images/wordpress.png", alt="Tools")
+					.border-top.flex-grow-1.ms-1.mb-0
+
+		//- Projects
+		section#projects.section--projects.bg-light
+			.container
+				h2.display-5.fw-bold My Projects
+				.row.g-5
+					.col-md-6
+						a.card(role='button' href='gemstone.html')
+							.mockup-image.mb-3.p-4
+								img.card-img-top(src="../assets/images/mockup/gem-9.png")
+								img.card-img-top(src="../assets/images/mockup/gem-12.png")
+								img.card-img-top(src="../assets/images/mockup/gem-7.png")
+							.card-body.hstack.p-0
+								.flex-grow-1
+									h5.card-title GemStone
+									p.card-text Splendor Game
+								i.fa-solid.fa-arrow-right.ms-auto.opacity-50
+					.col-md-6
+						a.card(role='button' href='restgo.html')
+							.mockup-image.mb-3.p-4
+								img.card-img-top(src="../assets/images/mockup/restgo-2.png")
+								img.card-img-top(src="../assets/images/mockup/restgo-3.png")
+								img.card-img-top(src="../assets/images/mockup/restgo-1.png")
+							.card-body.hstack.p-0
+								.flex-grow-1
+									h5.card-title Restgo
+									p.card-text Booking a pool villa
+								i.fa-solid.fa-arrow-right.ms-auto.opacity-50
+					.col-md-6
+						a.card(role='button' href='viorel.html')
+							.mockup-image.mb-3.p-4
+								img.card-img-top(src="../assets/images/mockup/viorel-4.png")
+								img.card-img-top(src="../assets/images/mockup/viorel-6.png")
+								img.card-img-top(src="../assets/images/mockup/viorel-5.png")
+							.card-body.hstack.p-0
+								.flex-grow-1
+									h5.card-title Viorel Agency
+									p.card-text Influencer reviews of products and services
+								i.fa-solid.fa-arrow-right.ms-auto.opacity-50
+					.col-md-6
+						a.card(role='button' href='barameshop.html')
+							.mockup-image.mb-3.p-4
+								img.card-img-top(src="../assets/images/mockup/barame-6.png")
+								img.card-img-top(src="../assets/images/mockup/barame-1.png")
+								img.card-img-top(src="../assets/images/mockup/barame-7.png")
+							.card-body.hstack.p-0
+								.flex-grow-1
+									h5.card-title Barame Shop
+									p.card-text Online Game Top-Up Card
+								i.fa-solid.fa-arrow-right.ms-auto.opacity-50
+					.col-md-6
+						a.card(role='button' href='chatbot.html')
+							.mockup-image.mb-3.p-4
+								img.card-img-top(src="../assets/images/mockup/com/cb-2.png")
+							.card-body.hstack.p-0
+								.flex-grow-1
+									h5.card-title Chat bot (Back-office)
+									p.card-text Chatbot Back-Office System
+								i.fa-solid.fa-arrow-right.ms-auto.opacity-50
+					.col-md-6
+						a.card(role='button' href='trendssocial.html')
+							.mockup-image.mb-3.p-4
+								img.card-img-top(src="../assets/images/mockup/com/social-1.png")
+							.card-body.hstack.p-0
+								.flex-grow-1
+									h5.card-title Trends Socialenable
+									p.card-text Social Listening Tools
+								i.fa-solid.fa-arrow-right.ms-auto.opacity-50
+
+	include footer

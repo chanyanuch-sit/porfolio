@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "build:pug": "pug includes/pug -o html -P",
+    "watch:pug": "pug -w includes/pug -o html -P",
+    "copy:fonts": "cp -r node_modules/@fortawesome/fontawesome-free/webfonts assets/",
+    "build:sass": "sass includes/sass/style.sass assets/css/style.css",
+    "watch:sass": "sass --watch includes/sass/style.sass:assets/css/style.css",
+    "build": "npm run build:pug && npm run build:sass",
+    "dev": "concurrently \"npm run watch:pug\" \"npm run watch:sass\""
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.97.3"
+  }
+}

@@ -1,0 +1,183 @@
+@use '_variables' as *
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap')
+
+$fa-font-path: "../webfonts"
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss"
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss"
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss"
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss"
+
+$sm: 576px
+$md: 768px
+$lg: 992px
+$xl: 1200px
+$xxl: 1400px
+
+body
+    font-family: 'Noto Sans Thai'
+
+section
+    padding-top: 5rem
+    padding-bottom: 5rem
+
+.section--about
+    display: flex
+    align-items: center
+    padding-top: calc(56px + 5rem)
+    min-height: 50dvh
+    background: var(--bs-light) url(../images/bg.png) right/cover no-repeat
+
+.section--experience
+    h2
+        margin-bottom: 1.5rem
+    .border-top
+        margin-bottom: 3rem
+
+    .timeline
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            top: 1rem
+            left: .5rem
+            width: 1px
+            height: 10rem
+            background: var(--bs-border-color)
+            transform: translateX(-50%)
+        .fa-circle-dot
+            position: absolute
+            top: 1rem
+            left: .5rem
+            transform: translate(-50%,-50%)
+    .label
+        padding-left: 2rem
+        @media ( width >= $md )
+            padding-left: 3rem
+    ul
+        margin-bottom: 0
+        padding-left: 1.25rem
+        li
+            display: flex
+            align-items: baseline
+            i
+                margin-right: .5rem
+                font-size: .5rem
+                color: var(--bs-gray-500)
+
+.section--skills
+    h2
+        margin-bottom: 1.5rem
+    .border-top
+        margin-bottom: 3rem
+    ul
+        li
+            display: flex
+            align-items: center
+            i
+                margin-right: .5rem
+                font-size: .5rem
+                color: var(--bs-gray-500)
+    img
+        height: 24px
+        @media ( width >= $md )
+            height: 32px
+
+.section--projects
+    h2
+        margin-bottom: 3rem
+    .card
+        border: none
+        background: transparent
+        text-decoration: none
+        .mockup-image
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: .5rem
+            background: var(--bs-gray-200)
+            overflow: hidden
+            border-radius: var(--bs-border-radius)
+            img
+                position: relative
+                height: 360px
+                width: auto
+                &:nth-of-type(1)
+                    top: 6rem
+                &:nth-of-type(2)
+                    top: 3rem
+                &:nth-of-type(3)
+                    top: 6rem
+        &:hover
+            .mockup-image
+                background: var(--bs-gray-300)
+            img
+                transition: all .2s ease
+                transform: scale(1.05)
+
+.section--contact
+    i
+        color: var(--bs-gray-500)
+
+.section--content
+    padding-top: calc(56px + 5rem)
+    min-height: 50dvh
+    .mockup-image
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: .5rem
+        margin-bottom: 5rem
+        background: var(--bs-gray-200)
+        overflow: hidden
+        border-radius: var(--bs-border-radius)
+        img
+            position: relative
+            height: 540px
+            width: auto
+            &:nth-of-type(1)
+                top: 6rem
+            &:nth-of-type(2)
+                top: 3rem
+            &:nth-of-type(3)
+                top: 6rem
+            &.w-full
+                top: 0
+                width: 100%
+                height: auto
+                @media ( width >= $lg )
+                    width: auto
+                    height: 480px
+
+    .mockup-image-list
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        gap: 1rem
+        img
+            height: 360px
+            width: auto
+            @media ( width >= $md )
+                height: 420px
+            &.w-full
+                width: 100%
+                height: auto
+                @media ( width >= $md )
+                    width: auto
+                    height: 420px
+            &.w-full-lg
+                @media ( width >= $md )
+                    height: 640px
+
+// animate
+.section--about,
+.section--experience,
+.section--skills,
+.section--contact
+    opacity: 0
+    transform: translateX(-100px)
+    transition: all .6s ease
+
+    &.animate
+        opacity: 1
+        transform: translateX(0)
