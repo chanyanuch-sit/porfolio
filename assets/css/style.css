@@ -10842,20 +10842,4 @@ section {
   }
 }
 
-.section--about,
-.section--experience,
-.section--skills,
-.section--contact {
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: all 0.6s ease;
-}
-.section--about.animate,
-.section--experience.animate,
-.section--skills.animate,
-.section--contact.animate {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 /*# sourceMappingURL=style.css.map */
