@@ -20,24 +20,32 @@ block content
 
 
 				.mockup-image-list.mb-4.mb-xl-5
-					img(src="../assets/images/restgo/mobile-restgo-07.png")
-					img(src="../assets/images/restgo/mobile-restgo-03.png")
-					img(src="../assets/images/restgo/mobile-restgo-01.png")
-					//- img(src="../assets/images/mockup/restgo-7.png")
-					//- img(src="../assets/images/mockup/restgo-8.png")
+					img(src="../assets/images/restgo/mobile-restgo-07.png").w-mobile
+					img(src="../assets/images/restgo/mobile-restgo-03.png").w-mobile
+					img(src="../assets/images/restgo/mobile-restgo-01.png").w-mobile
 
-				.mockup-image-list--desktop
-					img(src="../assets/images/restgo/desktop-restgo-01.png").w-full
-					div
-						img(src="../assets/images/restgo/desktop-restgo-05.png").w-lg.mb-4
-						img(src="../assets/images/restgo/desktop-restgo-02.png").w-lg
+				.mockup-image-list--desktop.mb-4.mb-xl-5
+					.row.g-3.g-md-4.align-items-center
+						.col-12.col-md-6
+							img(src="../assets/images/restgo/desktop-restgo-01.png")
+						.col-12.col-md-6
+							img(src="../assets/images/restgo/desktop-restgo-05.png").mb-3.mb-md-4
+							img(src="../assets/images/restgo/desktop-restgo-02.png")
 
-				.mockup-image-list--desktop.align-items-start.mb-4.mb-xl-5.bg-transparent(style='height: 1000px;')
-					img(src="../assets/images/restgo/017.png").w-sm
-					img(src="../assets/images/restgo/sceen-restgo-04.png").w-sm
-					img(src="../assets/images/restgo/sceen-restgo-05.png").w-sm
+				.mockup-image-list--desktop.mb-4.mb-xl-5.bg-transparent
+					.row.g-3.g-md-4
+						.col-4
+							img(src="../assets/images/restgo/017.png").w-sm
+						.col-4
+							img(src="../assets/images/restgo/sceen-restgo-04.png").w-sm
+						.col-4
+							img(src="../assets/images/restgo/sceen-restgo-05.png").w-sm
 
-				.mockup-image-list--desktop.align-items-start(style='height: 800px;')
-					img(src="../assets/images/restgo/sceen-restgo-02.png").w-sm
-					img(src="../assets/images/restgo/sceen-restgo-03.png").w-sm
+				.mockup-image-list--desktop.mb-4.mb-xl-5(style='height: 800px;')
+					.row.g-3.g-md-4.justify-content-center
+						.col-6.col-md-4
+							img(src="../assets/images/restgo/sceen-restgo-02.png").w-sm
+						.col-6.col-md-4
+							img(src="../assets/images/restgo/sceen-restgo-03.png").w-sm
+
 	include footer
