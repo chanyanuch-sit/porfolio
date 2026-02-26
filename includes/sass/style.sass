@@ -21,11 +21,27 @@ section
     padding-bottom: 5rem
 
 .section--about
+    position: relative
     display: flex
     align-items: center
-    padding-top: calc(56px + 5rem)
+    margin-top: calc(56px + 0.15rem)
     min-height: 50dvh
-    background: var(--bs-light) url(../images/bg.png) right/cover no-repeat
+    background: var(--bs-light)
+    // background: var(--bs-light) url(../images/bg.png) right/cover no-repeat
+    &::before
+        content: ""
+        position: absolute
+        inset: 0
+        z-index: -1
+        width: 100%
+        height: 100%
+        background-image: linear-gradient(to right, var(--bs-gray-500) 1px, transparent 1px), linear-gradient(to bottom, var(--bs-gray-500) 1px, transparent 1px)
+        background-size: 20px 20px
+        background-position: 0 0, 0 0
+        mask-image: repeating-linear-gradient(to right, black 0px, black 3px, transparent 3px, transparent 8px), repeating-linear-gradient(to bottom, black 0px, black 3px, transparent 3px, transparent 8px), radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)
+        -webkit-mask-image: repeating-linear-gradient(to right, black 0px, black 3px, transparent 3px, transparent 8px), repeating-linear-gradient(to bottom, black 0px, black 3px, transparent 3px, transparent 8px), radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)
+        mask-composite: intersect
+        -webkit-mask-composite: source-in
 
 .section--experience
     h2
