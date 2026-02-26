@@ -2,31 +2,37 @@ extends layout
 
 block content
 	include navbar
+	include breadcrumb
 
 	main
 		section#content.section--content
 			.container
+				.mb-5
+					+breadcrumb([{name: 'Home', url: 'index.html'}, {name: 'Barame Shop'}])
 				.text-center.mb-5
 					h1.display-4.fw-bold.mb-3 Barame Shop
 					p.h5.fw-bold.mb-4 Online Game Top-Up Card
 					div
 						| Created user flows for an online top-up system and developed responsive, cross-platform component templates.
 		
-				.mockup-image.p-5
-					img(src="../assets/images/mockup/com/DUO-2.png").w-full
+				.mockup-image.p-4.p-xl-5
+					img(src="../assets/images/mockup/com/DUO-2.png").img-single
 
 
 				.mockup-image-list.mb-5
-					img(src="../assets/images/mockup/barame-1.png")
-					img(src="../assets/images/mockup/barame-2.png")
-					img(src="../assets/images/mockup/barame-6.png")
-					img(src="../assets/images/mockup/barame-7.png")
+					img(src="../assets/images/mockup/barame-1.png").w-mobile
+					img(src="../assets/images/mockup/barame-2.png").w-mobile
+					img(src="../assets/images/mockup/barame-6.png").w-mobile
+					img(src="../assets/images/mockup/barame-7.png").w-mobile
 
 				.mockup-image-list
+					img(src="../assets/images/mockup/com/barame-8.png").w-full
 					img(src="../assets/images/mockup/com/barame-1.png").w-full
 					img(src="../assets/images/mockup/com/barame-2.png").w-full
 					img(src="../assets/images/mockup/com/barame-3.png").w-full
+					img(src="../assets/images/mockup/com/barame-10.png").w-full
 					img(src="../assets/images/mockup/com/barame-4.png").w-full
 					img(src="../assets/images/mockup/com/barame-6.png").w-full
+					img(src="../assets/images/mockup/com/barame-9.png").w-full
 
 	include footer

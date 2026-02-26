@@ -2,10 +2,13 @@ extends layout
 
 block content
 	include navbar
+	include breadcrumb
 
 	main
 		section#content.section--content
 			.container
+				.mb-5
+					+breadcrumb([{name: 'Home', url: 'index.html'}, {name: 'Trends Socialenable'}])
 				.text-center.mb-5
 					h1.display-4.fw-bold.mb-3 Trends Socialenable
 					p.h5.fw-bold.mb-4 Social Listening Tools
@@ -14,6 +17,9 @@ block content
 					
 				.mockup-image.p-5
 					img(src="../assets/images/mockup/com/social-1.png").w-full
+
+				.mockup-image-list.bg-light.p-4.p-xl-5.rounded
+					img(src="../assets/images/mockup/com/gg.png" style='max-width: 980px;').h-auto
 		
 
 

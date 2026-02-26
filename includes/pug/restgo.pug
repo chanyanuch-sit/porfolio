@@ -2,34 +2,42 @@ extends layout
 
 block content
 	include navbar
+	include breadcrumb
 
 	main
 		section#content.section--content
 			.container
-				.text-center.mb-5
+				.mb-4.mb-xl-5
+					+breadcrumb([{name: 'Home', url: 'index.html'}, {name: 'Restgo'}])
+				.text-center.mb-4.mb-xl-5
 					h1.display-4.fw-bold.mb-3 Restgo
 					p.h5.fw-bold.mb-4 Booking a pool villa
 					div
 						| Conducted user research and designed a pool villa booking system, including search, booking flow, and responsive cross-platform components.
 				
-				.mockup-image.p-5
-					img(src="../assets/images/mockup/com/DUO-5.png").w-full
+				.mockup-image.p-4.p-xl-5
+					img(src="../assets/images/mockup/com/DUO-5.png").img-single
 
 
-				.mockup-image-list.mb-5
-					img(src="../assets/images/mockup/restgo-2.png")
-					img(src="../assets/images/mockup/restgo-6.png")
-					img(src="../assets/images/mockup/restgo-1.png")
-					img(src="../assets/images/mockup/restgo-7.png")
-					img(src="../assets/images/mockup/restgo-8.png")
+				.mockup-image-list.mb-4.mb-xl-5
+					img(src="../assets/images/restgo/mobile-restgo-07.png")
+					img(src="../assets/images/restgo/mobile-restgo-03.png")
+					img(src="../assets/images/restgo/mobile-restgo-01.png")
+					//- img(src="../assets/images/mockup/restgo-7.png")
+					//- img(src="../assets/images/mockup/restgo-8.png")
 
-				.mockup-image-list
-					img(src="../assets/images/mockup/com/restgo-1.png").w-full
-					img(src="../assets/images/mockup/com/restgo-2.png").w-full
-					img(src="../assets/images/mockup/com/restgo-3.png").w-full
-					img(src="../assets/images/mockup/com/restgo-4.png").w-full
-					img(src="../assets/images/mockup/com/restgo-6.png").w-full
-		
+				.mockup-image-list--desktop
+					img(src="../assets/images/restgo/desktop-restgo-01.png").w-full
+					div
+						img(src="../assets/images/restgo/desktop-restgo-05.png").w-lg.mb-4
+						img(src="../assets/images/restgo/desktop-restgo-02.png").w-lg
 
+				.mockup-image-list--desktop.align-items-start.mb-4.mb-xl-5.bg-transparent(style='height: 1000px;')
+					img(src="../assets/images/restgo/017.png").w-sm
+					img(src="../assets/images/restgo/sceen-restgo-04.png").w-sm
+					img(src="../assets/images/restgo/sceen-restgo-05.png").w-sm
 
+				.mockup-image-list--desktop.align-items-start(style='height: 800px;')
+					img(src="../assets/images/restgo/sceen-restgo-02.png").w-sm
+					img(src="../assets/images/restgo/sceen-restgo-03.png").w-sm
 	include footer

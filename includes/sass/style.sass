@@ -57,8 +57,8 @@ section
         margin-bottom: 0
         padding-left: 1.25rem
         li
-            display: flex
-            align-items: baseline
+            // display: flex
+            // align-items: baseline
             i
                 margin-right: .5rem
                 font-size: .5rem
@@ -97,16 +97,18 @@ section
             background: var(--bs-gray-200)
             overflow: hidden
             border-radius: var(--bs-border-radius)
+
             img
                 position: relative
                 height: 360px
                 width: auto
                 &:nth-of-type(1)
-                    top: 6rem
+                    top: 4rem
                 &:nth-of-type(2)
-                    top: 3rem
+                    top: 2rem
                 &:nth-of-type(3)
-                    top: 6rem
+                    top: 4rem
+
         &:hover
             .mockup-image
                 background: var(--bs-gray-300)
@@ -119,27 +121,35 @@ section
         color: var(--bs-gray-500)
 
 .section--content
-    padding-top: calc(56px + 5rem)
+    padding-top: calc(56px + 2rem)
     min-height: 50dvh
     .mockup-image
         display: flex
         align-items: center
         justify-content: center
         gap: .5rem
-        margin-bottom: 5rem
-        background: var(--bs-gray-200)
+        margin-bottom: 2.5rem
+        background: var(--bs-gray-900)
         overflow: hidden
         border-radius: var(--bs-border-radius)
+        @media ( width >= $lg )
+            margin-bottom: 3rem
         img
             position: relative
-            height: 540px
-            width: auto
+            height: 240px
+            @media ( width >= $lg )
+                height: 540px
+                width: auto
             &:nth-of-type(1)
-                top: 6rem
+                top: 4rem
             &:nth-of-type(2)
-                top: 3rem
+                top: 2rem
             &:nth-of-type(3)
-                top: 6rem
+                top: 4rem
+            &.img-single
+                top: 0
+                width: 100%
+                height: auto
             &.w-full
                 top: 0
                 width: 100%
@@ -153,31 +163,133 @@ section
         align-items: center
         justify-content: center
         flex-wrap: wrap
-        gap: 1rem
+        gap: 1.5rem
+        @media ( width >= $xl )
+            gap: 3rem
         img
             height: 360px
             width: auto
+            border-radius: var(--bs-border-radius)
             @media ( width >= $md )
-                height: 420px
+                height: 560px
+            &.w-mobile
+                height: 260px
+                width: auto
+                border-radius: 1.75rem
+                @media ( width >= $xl )
+                    width: auto
+                    height: 360px
+                @media ( width >= $xl )
+                    width: auto
+                    height: 420px
             &.w-full
                 width: 100%
                 height: auto
+                border-radius: 1.75rem
                 @media ( width >= $md )
+                    width: auto
+                    height: 180px
+                @media ( width >= $xl )
                     width: auto
                     height: 420px
             &.w-full-lg
                 @media ( width >= $md )
                     height: 640px
 
-// animate
-// .section--about,
-// .section--experience,
-// .section--skills,
-// .section--contact
-//     opacity: 0
-//     transform: translateX(-100px)
-//     transition: all .6s ease
+    .mockup-image-list--desktop
+        display: flex
+        align-items: center
+        justify-content: center
+        // flex-wrap: wrap
+        gap: 1.5rem
+        padding: 3rem
+        background: var(--bs-gray-200)
+        overflow: hidden
+        border-radius: var(--bs-border-radius)
+        img
+            width: 560px
+            height: auto
+            border-radius: var(--bs-border-radius)
+            // height: 360px
+            // width: auto
+            // @media ( width >= $md )
+            //     height: 560px
+            &.w-sm
+                width: 360px
+            &.w-lg
+                width: 616px
+                // @media ( width >= $md )
+                //     width: auto
+                //     height: 420px
+            // &.w-full-lg
+            //     @media ( width >= $md )
+            //         height: 640px
 
-//     &.animate
-//         opacity: 1
-//         transform: translateX(0)
+// .section--portfolio
+//     display: flex
+//     flex-direction: row
+//     align-items: center
+//     justify-content: center
+//     gap: 2rem
+//     flex-wrap: wrap
+//     background: var(--bs-gray-300)
+//     height: 800px
+//     margin-top: 10rem
+//     padding-top: 5rem
+//     // padding-bottom: 5rem
+//     overflow: hidden
+//     border-radius: var(--bs-border-radius)
+//     img
+//         position: relative
+//         width: 100%
+//         max-width: 540px
+//         border-radius: var(--bs-border-radius)
+
+// animate
+.section--about,
+.section--experience,
+.section--skills,
+.section--contact
+    opacity: 0
+    transform: translateY(50px)
+    transition: all 0.8s ease-out
+
+    &.animate
+        opacity: 1
+        transform: translateY(0)
+
+.section--projects
+    .card
+        opacity: 0
+        transform: translateY(50px)
+        transition: all 0.8s ease-out
+
+    &.animate
+        .card
+            opacity: 1
+            transform: translateY(0)
+        @for $i from 1 through 10
+            .col-md-6:nth-child(#{$i}) .card
+                transition-delay: #{$i * 0.15}s
+
+.section--content img
+    opacity: 0
+    transform: translateY(50px)
+    transition: all 0.8s ease-out
+
+    &.animate
+        opacity: 1
+        transform: translateY(0)
+
+// breadcrumb
+.breadcrumb
+    font-size: 0.875rem
+    .breadcrumb-item
+        a
+            color: var(--bs-gray-500)
+            transition: color 0.2s ease
+            &:hover
+                color: var(--bs-primary)
+        &.active
+            color: var(--bs-gray-800)
+            font-weight: 500

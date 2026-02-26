@@ -2,29 +2,34 @@ extends layout
 
 block content
 	include navbar
+	include breadcrumb
 
 	main
 		section#content.section--content
 			.container
+				.mb-5
+					+breadcrumb([{name: 'Home', url: 'index.html'}, {name: 'GemStone'}])
 				.text-center.mb-5
-					h1.display-4.fw-bold.mb-3 Gam Stone
+					h1.display-4.fw-bold.mb-3 GemStone
 					p.h5.fw-bold.mb-4 Splendor Game (Cat ver.)
 					div
 						| Designed a  game in React Native, focusing on portrait orientation and a minimal UI design.
 
 				.mockup-image
-					img(src="../assets/images/mockup/gem-9.png")
-					img(src="../assets/images/mockup/gem-12.png")
-					img(src="../assets/images/mockup/gem-7.png")
+					img(src="../assets/images/mockup/gem-9.png").w-mobile
+					img(src="../assets/images/mockup/gem-12.png").w-mobile
+					img(src="../assets/images/mockup/gem-7.png").w-mobile
 
-				.mockup-image-list.mb-3
-					img(src="../assets/images/mockup/gem-6.png")
-					img(src="../assets/images/mockup/gem-5.png")
-					img(src="../assets/images/mockup/gem-3.png")
 				.mockup-image-list
-					img(src="../assets/images/mockup/gem-4.png")
-					img(src="../assets/images/mockup/gem-1.png")
-					img(src="../assets/images/mockup/gem-2.png")
+					img(src="../assets/images/mockup/gem-12.png").w-mobile
+					img(src="../assets/images/mockup/gem-9.png").w-mobile
+					img(src="../assets/images/mockup/gem-7.png").w-mobile
+					img(src="../assets/images/mockup/gem-6.png").w-mobile
+					img(src="../assets/images/mockup/gem-5.png").w-mobile
+					img(src="../assets/images/mockup/gem-3.png").w-mobile
+					img(src="../assets/images/mockup/gem-4.png").w-mobile
+					img(src="../assets/images/mockup/gem-1.png").w-mobile
+					img(src="../assets/images/mockup/gem-2.png").w-mobile
 		
 
 

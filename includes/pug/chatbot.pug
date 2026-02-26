@@ -2,25 +2,28 @@ extends layout
 
 block content
 	include navbar
+	include breadcrumb
 
 	main
 		section#content.section--content
 			.container
+				.mb-5
+					+breadcrumb([{name: 'Home', url: 'index.html'}, {name: 'Chat bot (Back-office)'}])
 				.text-center.mb-5
 					h1.display-4.fw-bold.mb-3 Chat bot (Back-office)
 					p.h5.fw-bold.mb-4 Chatbot Back-Office System
 					div
 						| Designed the visual interface for a chatbot back-office from given wireframes, following CI brand guidelines.
 
-				.mockup-image.p-5
-					img(src="../assets/images/mockup/com/cb-2.png").w-full
+				.mockup-image.p-4.p-xl-5
+					img(src="../assets/images/mockup/com/cb-full.png").img-single
 
 				.mockup-image-list
-					img(src="../assets/images/mockup/com/cb-1.png").w-full-lg
-					img(src="../assets/images/mockup/com/cb-3.png").w-full-lg
-					img(src="../assets/images/mockup/com/cb-4.png").w-full-lg
-					img(src="../assets/images/mockup/com/cb-6.png").w-full-lg
-					img(src="../assets/images/mockup/com/cb-7.png").w-full-lg
+					img(src="../assets/images/mockup/com/cb-1.png").w-full
+					img(src="../assets/images/mockup/com/cb-3.png").w-full
+					img(src="../assets/images/mockup/com/cb-4.png").w-full
+					img(src="../assets/images/mockup/com/cb-6.png").w-full
+					img(src="../assets/images/mockup/com/cb-7.png").w-full
 		
 
 

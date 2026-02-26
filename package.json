@@ -3,8 +3,8 @@
     "build:pug": "pug includes/pug -o html -P",
     "watch:pug": "pug -w includes/pug -o html -P",
     "copy:fonts": "cp -r node_modules/@fortawesome/fontawesome-free/webfonts assets/",
-    "build:sass": "sass includes/sass/style.sass assets/css/style.css",
-    "watch:sass": "sass --watch includes/sass/style.sass:assets/css/style.css",
+    "build:sass": "sass --silence-deprecation=import includes/sass/style.sass assets/css/style.css",
+    "watch:sass": "sass --silence-deprecation=import --watch includes/sass/style.sass:assets/css/style.css",
     "build": "npm run build:pug && npm run build:sass",
     "dev": "concurrently \"npm run watch:pug\" \"npm run watch:sass\""
   },

@@ -2,34 +2,38 @@ extends layout
 
 block content
 	include navbar
+	include breadcrumb
 
 	main
 		section#content.section--content
 			.container
+				.mb-5
+					+breadcrumb([{name: 'Home', url: 'index.html'}, {name: 'Viorel Agency'}])
 				.text-center.mb-5
 					h1.display-4.fw-bold.mb-3 Viorel Agency
 					p.h5.fw-bold.mb-4 Influencer reviews of products and services
 					div
 						| Designed an e-commerce system landing page in compliance with CI brand guidelines.
 
-				.mockup-image.p-5
-					img(src="../assets/images/mockup/com/DUO-12.png").w-full
+				.mockup-image.p-4.p-xl-5
+					img(src="../assets/images/mockup/com/DUO-12.png").img-single
 
 
-				.mockup-image-list.mb-3
-					img(src="../assets/images/mockup/viorel-6.png")
-					img(src="../assets/images/mockup/viorel-2.png")
-					img(src="../assets/images/mockup/viorel-3.png")
-					
-				.mockup-image-list.mb-5
-					img(src="../assets/images/mockup/viorel-4.png")
-					img(src="../assets/images/mockup/viorel-5.png")
+				.mockup-image-list.mb-3.mb-xl-5
+					img(src="../assets/images/mockup/viorel-6.png").w-mobile
+					img(src="../assets/images/mockup/viorel-2.png").w-mobile
+					img(src="../assets/images/mockup/viorel-3.png").w-mobile
+					img(src="../assets/images/mockup/viorel-4.png").w-mobile
+					img(src="../assets/images/mockup/viorel-5.png").w-mobile
 
-				.mockup-image-list
+				.mockup-image-list.mb-3.mb-xl-5
 					img(src="../assets/images/mockup/com/viorel-1.png").w-full
 					img(src="../assets/images/mockup/com/viorel-2.png").w-full
 					img(src="../assets/images/mockup/com/viorel-3.png").w-full
 					img(src="../assets/images/mockup/com/viorel-4.png").w-full
+
+				.mockup-image-list.bg-dark.p-4.p-xl-5.rounded
+					img(src="../assets/images/mockup/com/viorel-full.png" style='max-width: 980px;').h-auto
 		
 		
 
